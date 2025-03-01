@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_person__stateprovince
+    description: >
+      State and province lookup table.
+      This model is part of the People module from AdventureWorks Person schema.
+    columns:
+      - name: pk_state_province
+        description: Primary key for StateProvince records.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: state_province_code
+        description: ISO standard state or province code.
+        data_tests:
+          - not_null
+
+      - name: fk_country_region
+        description: ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode.
+        data_tests:
+          - not_null
+
+      - name: is_only_state_province
+        description: Flag indicating if StateProvinceCode exists (0) or if using CountryRegionCode due to unavailable StateProvinceCode (1).
+        data_tests:
+          - not_null
+
+      - name: state_province_name
+        description: State or province description.
+        data_tests:
+          - not_null
+
+      - name: fk_sales_territory
+        description: ID of the territory in which the state or province is located. Foreign key to SalesTerritory.SalesTerritoryID.
+
+      - name: row_guid
+        description: ROWGUIDCOL number uniquely identifying the record. Used to support merge replication sample.
+
+      - name: dt_modified_at
+        description: Date and time the record was last updated.
+
+      - name: dt_extracted_at
+        description: Timestamp indicating when the data was extracted from the source system.
