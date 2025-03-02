@@ -17,7 +17,6 @@ with
             , cast(UnitPriceDiscount as numeric) as unit_price_discount
             , ((OrderQty*UnitPrice)*(1-UnitPriceDiscount)) as order_total_price
             , cast(rowguid as string) as row_guid
-            , cast(_SDC_EXTRACTED_AT as timestamp) as dt_extracted_at
         from sources
     )
 

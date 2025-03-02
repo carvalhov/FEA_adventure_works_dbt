@@ -30,7 +30,6 @@ with
             , cast(TotalDue as numeric) as total_due
             , cast(Comment as string) as sales_comment
             , cast(rowguid as string) as row_guid
-            , cast(_SDC_EXTRACTED_AT as timestamp) as dt_extracted_at
         from sources
     )
 select *

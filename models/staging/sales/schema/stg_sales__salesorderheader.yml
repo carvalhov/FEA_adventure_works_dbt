@@ -105,6 +105,3 @@ models:
 
       - name: row_guid
         description: ROWGUIDCOL number uniquely identifying the record.
-
-      - name: dt_extracted_at
-        description: Timestamp indicating when the data was extracted from the source system.

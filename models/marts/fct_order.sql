@@ -75,7 +75,6 @@ with
             , stg_salesorderheader.freight
             , stg_salesorderheader.total_due
             , stg_salesorderheader.sales_comment
-            , stg_salesorderheader.dt_extracted_at
         from stg_salesorderheader
         left join dim_customer
             on stg_salesorderheader.fk_customer = dim_customer.pk_customer
@@ -95,7 +94,7 @@ with
             on stg_salesorderheader.dt_order = dim_dates.date_day
         qualify row_number() over (
             partition by stg_salesorderheader.pk_sales_order
-            order by stg_salesorderheader.dt_extracted_at desc
+            order by stg_salesorderheader.dt_modified_at desc
         ) = 1
     )
 

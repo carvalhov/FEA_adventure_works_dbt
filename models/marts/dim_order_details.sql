@@ -25,7 +25,6 @@ with
             , sales_order_detail.unit_price
             , sales_order_detail.unit_price_discount
             , sales_order_detail.order_total_price
-            , sales_order_detail.dt_extracted_at
         from sales_order_detail
         left join dim_product
             on sales_order_detail.fk_product = dim_product.pk_product

@@ -13,7 +13,6 @@ with
             , cast(TerritoryID as integer) as fk_sales_territory
             , cast(rowguid as string) as row_guid
             , cast(ModifiedDate as date) as dt_modified_at
-            , cast(_SDC_EXTRACTED_AT as timestamp) as dt_extracted_at
         from sources
     )
 select *

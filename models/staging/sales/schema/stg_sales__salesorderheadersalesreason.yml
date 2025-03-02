@@ -17,6 +17,3 @@ models:
 
       - name: dt_motified_at
         description: Date of of the order was modified.
-
-      - name: dt_extracted_at
-        description: timestamp of the extraction date.

@@ -44,7 +44,7 @@ with
                 when trim(Style) = 'U' then 'Universal'
                 when trim(Style) is null then '-'
             end as product_style_description
-            , cast(DiscontinuedDate as date) as discontinued_date
+            -- , cast(discontinueddate as date) as discontinued_date
             , cast(rowguid as string) as row_guid
             , cast(ModifiedDate as date) as dt_modified_at
         from sources

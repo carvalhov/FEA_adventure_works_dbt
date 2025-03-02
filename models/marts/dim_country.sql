@@ -9,7 +9,6 @@ with
             pk_country_region
             , contry_region_name
             , dt_modified_at
-            , dt_extracted_at
         from source_staging
     )
 

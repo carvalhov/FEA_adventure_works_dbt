@@ -29,7 +29,6 @@ with
             , cast(CurrentFlag as boolean) as is_active
             , cast(rowguid as string) as row_guid
             , cast(ModifiedDate as date) as dt_modified_at
-            , cast(_SDC_EXTRACTED_AT as timestamp) as dt_extracted_at
         from sources
     )
 

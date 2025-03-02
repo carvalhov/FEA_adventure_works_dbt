@@ -11,7 +11,6 @@ with
             , sales_reason_name
             , sales_reason_type
             , dt_modified_at
-            , dt_extracted_at
         from source_intermediate
     )
 

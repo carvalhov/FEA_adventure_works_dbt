@@ -21,7 +21,6 @@ with
             end as sales_reason_name
             , sales_reason.sales_reason_type
             , sales_order.dt_modified_at
-            , sales_order.dt_extracted_at
         from staging_sales_order_header_sales_reason as sales_order
         left join staging_sales_reason as sales_reason
             on sales_order.fk_sales_reason = sales_reason.pk_sales_reason

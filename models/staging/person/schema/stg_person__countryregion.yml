@@ -19,6 +19,3 @@ models:
 
       - name: dt_modified_at
         description: Date and time when the record was last updated.
-
-      - name: dt_extracted_at
-        description: Timestamp of the extraction date.

@@ -33,6 +33,3 @@ models:
 
       - name: modified_date
         description: Date and time the record was last updated. Default value is the current system date (getdate()).
-
-      - name: dt_extracted_at
-        description: timestamp of the extraction date.

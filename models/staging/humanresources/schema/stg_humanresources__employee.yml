@@ -60,6 +60,3 @@ models:
 
       - name: dt_modified_at
         description: Date and time the record was last updated. Default - current system date
-
-      - name: dt_extracted_at
-        description: timestamp of the extraction date.

@@ -31,7 +31,6 @@ with
             , source_salesperson.vl_sales_last_year
             , source_salesperson.row_guid
             , source_salesperson.dt_modified_at
-            , source_salesperson.dt_extracted_at
         from source_salesperson
         left join source_employee
             on source_salesperson.pk_salesperson = source_employee.pk_employee
