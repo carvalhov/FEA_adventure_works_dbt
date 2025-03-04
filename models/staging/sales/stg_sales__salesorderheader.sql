@@ -24,10 +24,10 @@ with
             , cast(PurchaseOrderNumber as string) as purchase_order_number
             , cast(AccountNumber as string) as account_number
             , cast(CreditCardApprovalCode as string) as credit_card_approval_code
-            , cast(SubTotal as numeric) as subtotal
-            , cast(TaxAmt as numeric) as tax_amount
-            , cast(Freight as numeric) as freight
-            , cast(TotalDue as numeric) as total_due
+            , cast(SubTotal as decimal(10, 2)) as subtotal
+            , cast(TaxAmt as decimal(10, 2)) as tax_amount
+            , cast(Freight as decimal(10, 2)) as freight
+            , cast(TotalDue as decimal(10, 2)) as total_due
             , cast(Comment as string) as sales_comment
             , cast(rowguid as string) as row_guid
         from sources
