@@ -32,15 +32,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   FEA_adventure_works_dbt:
     staging:
-      +materialized: view
+      +materialized: "{{ 'table' if target.name == 'dev' else 'ephemeral' }}"
     intermediate:
-      +materialized: view
+      +materialized: "{{ 'table' if target.name == 'dev' else 'ephemeral' }}"
     marts:
-      +materialized: table
+      +materialized: "{{ 'table' }}"
 
-#    staging:
-#     +materialized: "{{ 'table' if target.name == 'dev' else 'ephemeral' }}"
-#    intermediate:
-#      +materialized: "{{ 'table' if target.name == 'dev' else 'ephemeral' }}"
-#    marts:
-#      +materialized: "{{ 'table' }}"
