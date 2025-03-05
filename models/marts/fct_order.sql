@@ -52,6 +52,7 @@ with
             , stg_salesorderheader.dt_modified_at
             , dim_order_details.sell_start_date
             , dim_order_details.sell_end_date
+            , dim_customer.person_name
             , dim_order_details.product_name
             , coalesce(dim_sales_reason.sales_reason_name, 'Other') as sales_reason_name
             , dim_territory.territory_name
